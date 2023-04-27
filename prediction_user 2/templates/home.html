@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <!-- <div class="title">
+        <h1>Course Prediction</h1>
+     </div> -->
+           <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+   </head>
+   <body>
+      <h1 class="title">Course Prediction</h1>
+      <div class="container">
+         <form method="POST" action="{{ url_for('predict') }}">
+            <label for="course">Course Enrolled:</label>
+            <select id="course" name="course"  required>
+               <option value="Course A">Course A</option>
+               <option value="Course B">Course B</option>
+               <option value="Course C">Course C</option>
+            </select><br><br>
+
+            <label for="status">Completion Status:</label>
+            <select id="status" name="status"  required>
+               <option value="Not started">Not started</option>
+               <option value="In progress">In progress</option>
+               <option value="Completed">Completed</option>
+            </select><br><br>
+
+            <label for="current_courses">Current Courses in Progress:</label>
+            <input type="text" id="current_courses" name="course"  required><br><br>
+
+
+            <label for="scores">Assessment/Quiz Scores:</label>
+            <input type="text" id="scores" name="scores"  required><br><br>
+
+            <label for="time_spent">Time Spent on the Course:</label>
+            <input type="text" id="time_spent" name="time_spent"  required><br><br>
+
+            <input type="submit" value="Submit">
+         </form>
+      </div>
+   </body>
+</html>
+
